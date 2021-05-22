@@ -4,10 +4,10 @@ function Person(name, age) {
   this.name = name
   this.age = age
   this.stomach = []
-  this.toString = function toString() {
+  this.toString = function () {
     return `${this.name}, ${this.age}`
   }
-  this.eat = function eat(food) {
+  this.eat = function (food) {
     if (this.stomach.length < 10) {
       this.stomach.push(food)
       return this.stomach
@@ -15,7 +15,7 @@ function Person(name, age) {
       return `Stomach is full`
     }
   }
-  this.poop = function poop() {
+  this.poop = function () {
     this.stomach.length = 0
     return this.stomach
   }
