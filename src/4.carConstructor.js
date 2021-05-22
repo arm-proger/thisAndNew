@@ -5,7 +5,7 @@ function Car(model, milesPerGallon) {
   this.milesPerGallon = milesPerGallon
   this.tank = 0
   this.odometer = 0
-  this.fill = function fill(gallons) {
+  this.fill = function (gallons) {
     this.tank =
       this.tank + gallons > milesPerGallon
         ? milesPerGallon
@@ -13,7 +13,7 @@ function Car(model, milesPerGallon) {
 
     return this.tank
   }
-  this.drive = function drive(distance) {
+  this.drive = function (distance) {
     if (distance < this.tank) {
       this.tank -= distance
       this.odometer += distance
